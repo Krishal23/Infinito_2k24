@@ -1,0 +1,84 @@
+/* Navbar Styles */
+.nav {
+    
+    width: 100%;
+    background-color: rgba(61, 61, 61, 0.75); /* Semi-transparent background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Padding for spacing */
+    font-family: "Raleway", sans-serif;
+    color: white;
+    backdrop-filter: blur(12px);
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.707); /* Add shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    
+}
+.navBox{
+    width: 95vw;
+    position: fixed;
+    margin-top: 24px;
+    margin-left: 24px;
+    
+}
+
+.nav-logo img {
+    width: 40px; /* Resize logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1rem; /* Space between logo and links */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem; /* Spacing between links */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem; /* Padding for better spacing */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for text color and background */
+    border-radius: 5px; /* Rounded corners for link background */
+    font-size: 1rem; /* Adjust font size */
+}
+
+.nav-link:hover {
+    color: #ff9800; /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Add a slight background color change on hover */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1024px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0.6rem; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
